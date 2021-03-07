@@ -1,0 +1,7 @@
+#修改端口
+server:
+  port: 8888
+
+#自定义配置项
+test:
+  hello: hallo
