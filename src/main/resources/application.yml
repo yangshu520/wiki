@@ -5,3 +5,13 @@ server:
 #自定义配置项
 test:
   hello: hallo
+
+
+#添加数据库连接
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306
+    username: wiki
+    password: wiki
+    driver-class-name: com.mysql.cj.jdbc.Driver
+

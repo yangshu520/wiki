@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 
 public class TestController {
-    //读取自定义配置项
-    @Value("${test:hello}")
+    //读取自定义配置项 :TSET 默认值
+    @Value("${test.hello:TEST}")
     private String hello;
 
     /*
