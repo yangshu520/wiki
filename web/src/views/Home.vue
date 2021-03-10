@@ -97,7 +97,7 @@ export default defineComponent({
     })
 
     onMounted(()=>{
-      axios.get("http://localhost:8081/ebook/list?name=spring").then(({data})=>{
+      axios.get("/ebook/list?name=spring").then(({data})=>{
         ebook.value=data.content;
         ebooks.ebook=data.content;
       });
