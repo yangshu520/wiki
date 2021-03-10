@@ -6,6 +6,7 @@ import com.jiawa.wiki.mapper.EbookMapper;
 import com.jiawa.wiki.req.EbookReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
 import java.util.List;
 
@@ -19,7 +20,9 @@ public class EbookService {
         EbookExample ebookExample=new EbookExample();
         EbookExample.Criteria criteria=ebookExample.createCriteria();
 
-        criteria.andNameLike("%"+req.getName()+"%");
+        if(!ObjectUtils.isEmpty(req.getName())){
+            criteria.andNameLike("%"+req.getName()+"%");
+        }
         return ebookMapper.selectByExample(ebookExample);
     }
 }
